@@ -1,2 +1,2 @@
-# LinuxLab
-Practicals performed in Linux Lab
+# Labs
+Practicals performed in different labs over different semesters.
