@@ -1,7 +1,7 @@
 ## LINUX/UNIX LAB LIST (IT-119)
 
 ```
-The programs are implemented in bourne shell and hence will include the !/bin/sh syntax in all files
+The programs are implemented in bourne shell and hence will include the !/bin/sh syntax in all files.
 
 ```
 
