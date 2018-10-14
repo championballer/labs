@@ -1,5 +1,10 @@
 ## LINUX/UNIX LAB LIST (IT-119)
 
+```
+The programs are implemented in bourne shell and hence will include the !/bin/sh syntax in all files
+
+```
+
 1. Installation of Linux Operating System.
 2. Introduction to the structure of Linux Operating System.
 3. Introduction to basic commands.
