@@ -46,6 +46,7 @@ int main()
 		for(int j=0;j<9;j++)board[i][j]=0;
 	}
 
+	
 	for(int i=0;i<unique_entries;i++)
 	{
 
