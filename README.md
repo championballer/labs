@@ -8,4 +8,6 @@ Labs included:
   2. Multimedia
   3. Networks
   4. Operating Systems
+  5. Infosec
+  6. Design and Analysis of Algorithms
 ```
