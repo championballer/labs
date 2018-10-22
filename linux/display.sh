@@ -24,5 +24,4 @@ fi
 
 echo "$file r:$read w:$write x:$exe"  
 
-
 done
