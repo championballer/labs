@@ -5,22 +5,22 @@ using namespace std;
 int knap_sack(int w_knapsack, int * weight, int * val, int n) 
 { 
    int i, w; 
-   int K[n+1][w_knapsack+1]; 
+   int Knap[n+1][w_knapsack+1]; 
   
   for (i = 0; i <= n; i++) 
   { 
       for (w = 0; w <= w_knapsack; w++) 
       { 
           if(i==0 || w==0) 
-              K[i][w] = 0; 
+              Knap[i][w] = 0; 
           else if (weight[i-1] <= w) 
-                K[i][w] = max(val[i-1] + K[i-1][w-weight[i-1]],  K[i-1][w]); 
+                Knap[i][w] = max(val[i-1] + Knap[i-1][w-weight[i-1]],  Knap[i-1][w]); 
           else
-                K[i][w] = K[i-1][w]; 
+                Knap[i][w] = Knap[i-1][w]; 
        } 
    } 
   
-   return K[n][w_knapsack]; 
+   return Knap[n][w_knapsack]; 
 } 
   
 int main() 
