@@ -17,14 +17,24 @@ int main()
 		string key;
 		cout<<"Enter key:";
 		cin>>key;
+		string encode = plain;
 
 		for(int i=0,j=0;i<plain.length();i++)
 		{
-			plain[i]=(plain[i]-97+key[j]-97)%26+97;
+			encode[i]=(encode[i]-97+key[j]-97)%26+97;
 			j = (j+1)%key.length();
 
 		}
 
-		cout<<plain<<endl;
+		cout<<"Encoded string is:"<<encode<<endl;
+		
+		string decode = encode;
+		for(int i=0,j=0;i<plain.length();i++)
+		{
+			decode[i] = (((decode[i]-97)+26-(key[j]-97))%26)+97;
+			j =  (j+1)%key.length();
+		}
+
+		cout<<decode<<endl;
 	}
 }
