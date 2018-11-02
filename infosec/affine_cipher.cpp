@@ -21,6 +21,7 @@ int inverse(int N)
 int main()
 {
 	int T;
+	cout<<"Please enter the no. of testcases:";
 	cin>>T;
 	int K1=3,K2=10;
 	int inv=inverse(K1);
