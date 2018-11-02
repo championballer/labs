@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-using namespace std;
 
+using namespace std;
 
 int inverse(int N)
 {
@@ -18,9 +18,11 @@ int inverse(int N)
 	}
 	return t1;
 }
+
 int main()
 {
 	int T;
+	cout<<"Please enter the no. of testcases:";
 	cin>>T;
 	int K=3;
 	int inv=inverse(K);
