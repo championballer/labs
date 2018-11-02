@@ -15,7 +15,7 @@ Rail fence—Row & column transformation
 DES
 AES
 RSA
-ElGlgamal
+Elgamal
 Rabin
 ECC
 MD5
