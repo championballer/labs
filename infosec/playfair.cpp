@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
 
@@ -21,6 +22,7 @@ int inverse(int N)
 int main()
 {
 	int T;
+	cout<<"Please enter the no. of testcases:";
 	cin>>T;
 
 	while(T--)
