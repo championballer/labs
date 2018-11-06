@@ -13,7 +13,6 @@ Rail fence—Row & column transformation
 2. Implement the following algoritms:
 ```
 DES
-AES
 RSA
 Elgamal
 Rabin
