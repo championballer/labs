@@ -1,6 +1,16 @@
+
 #include <bits/stdc++.h>
+
 using namespace std;
 
+long long gcd(long long a,long long b)
+{
+	if(a==0 && b==0)return 0;
+	if(b>a)return gcd(b,a);
+	if(b==0)return a;
+
+	return gcd(b,a%b);
+}
 int findInverse(int N,int M)
 {
 	N=N%M;
@@ -38,7 +48,7 @@ int main()
 	///3. choose e such that gcd(e,Q(n))=1.
 	int e=2;
 	int Qn=(p-1)*(q-1);
-	while(__gcd(e,Qn)!=1 && e<Qn)
+	while(gcd(e,Qn)!=1 && e<Qn)
 		e++;
 	///4. d=inverse(e) mod Qn
 	int d=findInverse(e,Qn);
