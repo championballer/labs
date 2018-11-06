@@ -35,6 +35,6 @@ int main()
 			j =  (j+1)%key.length();
 		}
 
-		cout<<decode<<endl;
+		cout<<"Decoded string is:"<<decode<<endl;
 	}
 }

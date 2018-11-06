@@ -30,6 +30,7 @@ int main()
 		string input,output,key;
 		cout<<"Message: ";
 		cin>>input;
+		cout<<"Key: ";
 		cin>>key;
 
 		
