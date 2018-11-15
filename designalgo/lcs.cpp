@@ -4,13 +4,7 @@ using namespace std;
 
 int lcs(string s1, string s2){
 
-  /*  Don't write main().
-   *  Don't read input, it is passed as function argument.
-   *  Return output and don't print it.
-   *  Taking input and printing output is handled automatically.
-   */
-
-  	vector<vector<int> > dp;
+    vector<vector<int> > dp;
   	for(int i=0;i<=s1.length();i++)
     {
       vector<int> small(s2.length()+1);
@@ -41,4 +35,14 @@ int lcs(string s1, string s2){
     }
   
   	return dp[s1.length()][s2.length()];
+}
+
+int main()
+{
+  string s1,s2;
+
+  cout<<"Please enter strings to compare:";
+  cin>>s1>>s2;
+
+  cout<<lcs(s1,s2)<<endl;
 }
