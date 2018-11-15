@@ -1,55 +1,47 @@
-#include<iostream>
-#include<queue>
-
+#include <bits/stdc++.h>
 using namespace std;
-
-void print(int** edges, int n, int sv, bool* visited)
+void bfs(vector<vector<int> > &a, int s)
 {
-  queue<int> pendingVertices;
-  pendingVertices.push(sv);
-  visited[sv]=true;
-  while(pendingVertices.size()!=0)
-  {
-    int p=pendingVertices.front();
-    cout<<p<<" ";
-    pendingVertices.pop();
-    for(int i=0;i<n;i++)
-      if(edges[p][i]==1 && !visited[i])
-      {
-        pendingVertices.push(i);
-        visited[i]=true;
-      }
-  }
+int n = a.size();
+vector<bool> vis(n, false);
+queue<int> q;
+q.push(s);
+vis[s] = true;
+while (!q.empty())
+{
+int x = q.front();
+q.pop();
+for (int i = 0; i < a[x].size(); i++)
+{
+if (!vis[a[x][i]])
+{
+q.push(a[x][i]);
+vis[a[x][i]] = true;
 }
-
+}
+cout << x + 1 << " ";
+}
+}
 int main()
 {
-  int n, e;
-  cin>>n>>e;
-  
-  int** edges=new int*[n];
-  for(int i=0;i<n;i++)
-  {
-    edges[i]=new int[n];
-    for(int j=0;j<n;j++)
-    {
-		edges[i][j]=0;
-    }
-  }
-  
-  for(int j=0;j<e;j++)
-  {
-    int f,t;
-    cin>>f>>t;
-    edges[f][t]=1;
-    edges[t][f]=1;
-  }
-  
-  bool* visited=new bool[n];
-  for(int i =0;i<n;i++)
-  {
-    visited[i]=false;
-  }
-  
-  print(edges, n, 0, visited);
+int n, e;
+cout<<"Please enter the number of nodes and edges:";
+cin >> n>>e;
+
+cout<<"Please enter source, destination for each edge:";
+vector<vector<int> > a(n, vector<int>(1, 0));
+for (int i = 0; i < e; i++)
+{
+int x, y;
+
+cin >> x >> y;
+a[x - 1].push_back(y - 1);
+a[y - 1].push_back(x - 1);
+}
+int s;
+cout << "Enter the source node: ";
+cin >> s;
+bfs(a, s - 1);
+cout << endl;
+return 0;
 }
