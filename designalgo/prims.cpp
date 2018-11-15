@@ -76,9 +76,11 @@ int main()
   
   //taking Input;
   int n,e;
+  cout<<"Please enter the number of nodes and edges:";
   cin>>n>>e;
   
   int** edges=new int*[n];
+  cout<<"Please enter source, destination and corresponding weights for each edge:";
   for(int i=0;i<n;i++)
   {
     edges[i]=new int[n];
