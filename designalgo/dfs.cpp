@@ -1,49 +1,34 @@
-#include<bits/stdc++.h>
-
+#include <bits/stdc++.h>
 using namespace std;
-
-void print(int** edges, int n, int sv, bool* visited)
+void dfs(vector<vector<int> > &a, int s, vector<bool> &vis)
 {
-  cout<<sv+1<<endl;
-  visited[sv]=true;
-
-  for(int i=0;i<n;i++)
-  {
-    if(edges[sv][i]==1 && !visited[i])
-    {
-      print(edges,n,i,visited);
-    }
-  }
+vis[s] = true;
+cout << s + 1 << " ";
+for (int i = 0; i < a[s].size(); i++)
+if (!vis[a[s][i]])
+dfs(a, a[s][i], vis);
 }
-
 int main()
 {
-  int n, e;
-  cin>>n>>e;
-  
-  int** edges=new int*[n];
-  for(int i=0;i<n;i++)
-  {
-    edges[i]=new int[n];
-    for(int j=0;j<n;j++)
-    {
-		edges[i][j]=0;
-    }
-  }
-  
-  for(int j=0;j<e;j++)
-  {
-    int f,t;
-    cin>>f>>t;
-    edges[f-1][t-1]=1;
-    edges[t-1][f-1]=1;
-  }
-  
-  bool* visited=new bool[n];
-  for(int i =0;i<n;i++)
-  {
-    visited[i]=false;
-  }
-  
-  print(edges, n, 0, visited);
+int n, e;
+cout<<"Please enter the number of nodes and edges:";
+cin >> n >>e;
+
+cout<<"Please enter source, destination for each edge:";
+vector<vector<int> > a(n, vector<int>(1, 0));
+for (int i = 0; i < e; i++)
+{
+int x, y;
+
+cin >> x >> y;
+a[x - 1].push_back(y - 1);
+a[y - 1].push_back(x - 1);
+}
+int s;
+cout << "Enter the source node: ";
+cin >> s;
+vector<bool> vis(n, false);
+dfs(a, s - 1, vis);
+cout << endl;
+return 0;
 }
