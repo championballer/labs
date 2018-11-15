@@ -26,11 +26,14 @@ int findParent(int* parent,int i)
 int main()
 {
   int n,e;
+  cout<<"Please enter the number of nodes and edges:";
   cin>>n>>e;
   
   edge* input=new edge[e];
+  cout<<"Please enter source, destination and corresponding weights for each edge:";
   for(int i=0;i<e;i++)
   {
+
     int src, des, w;
     cin>>src>>des>>w;
     input[i].source=src;
