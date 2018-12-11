@@ -16,4 +16,5 @@ DES
 RSA
 Elgamal
 Rabin
+Elliptic
 ```
