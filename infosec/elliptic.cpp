@@ -133,7 +133,19 @@ int main()
 	e2 = scalar(e1,d,a,p);
 	cout<<"e2:"<<e2.x<<" "<<e2.y<<endl;	
 
-	
+	point plain;
+	cout<<"Plaintext:";
+	cin>>plain.x>>plain.y;
+	int r;
+	cout<<"r:";
+	cin>>r;
+
+	point c1;
+	c1 = scalar(e1,r,a,p);
+	cout<<"C1:"<<c1.x<<" "<<c1.y<<endl;
+	point c2;
+	c2 = unit(plain,scalar(e2,r,a,p),a,p);
+	cout<<"C2:"<<c2.x<<" "<<c2.y<<endl;
 	
 	
 }
