@@ -23,5 +23,13 @@ Elliptic
 ```
 1. RSA 
 2. Elgamal
+3. DSS
+4. Schnorr
+```
 
+4. Mathematical Tools
+```
+1. Matrix Multiplication
+2. Inverse of a matrix
+3. Chinese Remainder
 ```

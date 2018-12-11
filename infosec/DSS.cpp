@@ -40,11 +40,22 @@ int sign(int m,int d,int n,int q=0)
 	for(int i=0;i<d;i++)
 	{
 		result = ((((result)*(m))%n)+n)%n;
-		/*if(q!=0)
-		result = result%q*/;
 	}
 
 	return (int)result;
+}
+
+int verify(int e1,int e2,int m_digest,int s1,int s2,int p,int q)
+{
+	int s2_inv = mod_inverse(s1,q);
+	int pw1 = (m_digest*s2_inv)%q;
+	int t1 = sign(e1,pw1,p);
+	int pw2 = (s1*s2_inv)%q;
+	int t2 = sign(e2,pw2,p);
+
+	int v = ((t1*t2)%p)%q;
+
+	return v;
 }
 
 int main()
@@ -73,11 +84,15 @@ int main()
 	cin>>r;
 
 	int s1;
-	s1 = ((sign(e1,r,p,q))%q)*e0;
+	s1 = ((sign(e1,r,p,q))%q);
 	cout<<"s1:"<<s1<<endl;
 
 	int s2;
 	s2 = (((m_digest+((d*s1)%q))%q)*(mod_inverse(r,q)))%q;
 	cout<<"s2:"<<s2<<endl;
+
+	int v;
+	v = verify(e1,e2,m_digest,s1,s2,p,q);
+	cout<<"v:"<<v<<endl;
 
 }

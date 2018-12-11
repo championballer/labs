@@ -23,14 +23,6 @@ int main()
 		}
 	}
 
-	for(int i=0;i<x1;i++)
-	{
-		for(int j=0;j<y1;j++)
-		{
-			cout<<A1[i][j]<<" ";
-		}
-		cout<<endl;
-	}	
 	cout<<"Enter dimension of second matrix:";
 	cin>>x2>>y2;
 	int ** A2 = new int*[x2];
@@ -43,18 +35,9 @@ int main()
 		}
 	}
 
-	for(int i=0;i<x2;i++)
-	{
-		for(int j=0;j<y2;j++)
-		{
-			cout<<A2[i][j]<<" ";
-		}
-		cout<<endl;
-	}
+	
 	int ** A3;
 	if(y1!=x2)return -1;
-
-	 
 	else
 	{
 		A3 = new int*[x1];	
