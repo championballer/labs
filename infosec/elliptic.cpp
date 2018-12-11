@@ -99,6 +99,15 @@ point unit(point p1,point p2,int a, int p)
 	else return add_diff(p1,p2,p);
 }
 
+point inv(point p1, int p)
+{
+	point result;
+	result.x = p1.x;
+	result.y = p-p1.y;
+
+	return result;
+}
+
 point scalar(point p1, int d, int a, int p)
 {
 	point p2;
@@ -150,6 +159,11 @@ int main()
 	point t2 = scalar(c1,d,a,p);
 	cout<<"T2:"<<t2.x<<" "<<t2.y<<endl;
 
-	cout<<mod_inverse(t2.y)<<endl;
+	point t2_inv = inv(t2,p);
+	cout<<"T2 inv:"<<t2_inv.x<<" "<<t2_inv.y<<endl;
+
+	point decrypt = unit(t2_inv,c2,a,p);
+	cout<<"Decrypted text:"<<decrypt.x<<" "<<decrypt.y<<endl;
+
 	
 }
