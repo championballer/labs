@@ -108,24 +108,18 @@ int main()
 	int d;
 	point p1;
 	point p2;
-	cin>>a>>p>>d>>p1.x>>p1.y>>p2.x>>p2.y;
-	/*point p3 = add(p1,p2,p);
-	cout<<p3.x<<" "<<p3.y<<endl;
-	point p4 = multi(p1,a,p);
-	p4.x = p1.x;
-	p4.y = p1.y; 
-	for(int i=0;i<d-2;i++)
+	cin>>a>>p>>d>>p1.x>>p1.y;
+	p2.x = p1.x;
+	p2.y = p1.y;
+	for(int i=0;i<d-1;i++)
 	{
-		p4 = add(p1,p4,p);
-	}s
-	//cout<<p4.x<<" "<<p4.y<<endl;
-	//cout<<p4.x<<" "<<p4.y<<endl;
-	//p2 = multi(p1,a,p);*/
+		p2 = unit(p1,p2,a,p);
+	}
 
-	point p3 = unit(p1,p2,a,p);
+	cout<<p2.x<<" "<<p2.y<<endl;
+	
 
-	cout<<p3.x<<p3.y<<endl;
-
+	
 	
 	
 }
