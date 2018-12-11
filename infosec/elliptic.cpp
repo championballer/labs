@@ -52,22 +52,21 @@ int slope_d(point p1,int a,int p)
 {
 	int x1 = p1.x;
 	int x1_2 = (x1*x1)%p;
-	cout<<x1_2<<endl;
+	
 	int x = (3*x1_2)%p;
-	cout<<x<<endl;
+	
 	int t1 = (((x+a)%p)+p)%p;
-	cout<<t1<<endl;
+	
 	int par1 = (2*p1.y)%p;
 	int t2 = mod_inverse(par1,p);
-	cout<<t2<<endl;
+	
 	int result = ((t1)*(t2))%p;
 	return result;
 }
 
-point multi(point p1,int a,int p)
+point add_same(point p1,int a,int p)
 {
 	int s = slope_d(p1,a,p);
-	cout<<s<<endl;
 	point p_result;
 	int s_2 = (s*s)%p;
 	p_result.x = (((s_2-p1.x-p1.x)%p)+p)%p;
@@ -77,7 +76,7 @@ point multi(point p1,int a,int p)
 	return p_result;
 }
 
-point add(point p1,point p2,int p)
+point add_diff(point p1,point p2,int p)
 {
 	int s = slope(p1,p2,p);
 	point p_result;
@@ -89,6 +88,18 @@ point add(point p1,point p2,int p)
 	return p_result;	
 }
 
+
+point unit(point p1,point p2,int a, int p)
+{
+	if(p1.x==p2.x and p1.y==p2.y)
+	{
+		return add_same(p1,a,p); 
+	}
+
+	else return add_diff(p1,p2,p);
+}
+
+
 int main()
 {
 
@@ -97,19 +108,23 @@ int main()
 	int d;
 	point p1;
 	point p2;
-	cin>>a>>p>>d>>p1.x>>p1.y/*>>p2.x>>p2.y*/;
+	cin>>a>>p>>d>>p1.x>>p1.y>>p2.x>>p2.y;
 	/*point p3 = add(p1,p2,p);
-	cout<<p3.x<<" "<<p3.y<<endl;*/
+	cout<<p3.x<<" "<<p3.y<<endl;
 	point p4 = multi(p1,a,p);
-	/*p4.x = p1.x;
-	p4.y = p1.y;*/ 
-	/*for(int i=0;i<d-2;i++)
+	p4.x = p1.x;
+	p4.y = p1.y; 
+	for(int i=0;i<d-2;i++)
 	{
 		p4 = add(p1,p4,p);
-	}*/
+	}s
 	//cout<<p4.x<<" "<<p4.y<<endl;
-	cout<<p4.x<<" "<<p4.y<<endl;
-	//p2 = multi(p1,a,p);
+	//cout<<p4.x<<" "<<p4.y<<endl;
+	//p2 = multi(p1,a,p);*/
+
+	point p3 = unit(p1,p2,a,p);
+
+	cout<<p3.x<<p3.y<<endl;
 
 	
 	
