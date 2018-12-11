@@ -149,5 +149,7 @@ int main()
 	
 	point t2 = scalar(c1,d,a,p);
 	cout<<"T2:"<<t2.x<<" "<<t2.y<<endl;
+
+	cout<<mod_inverse(t2.y)<<endl;
 	
 }
