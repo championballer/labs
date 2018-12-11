@@ -147,5 +147,7 @@ int main()
 	c2 = unit(plain,scalar(e2,r,a,p),a,p);
 	cout<<"C2:"<<c2.x<<" "<<c2.y<<endl;
 	
+	point t2 = scalar(c1,d,a,p);
+	cout<<"T2:"<<t2.x<<" "<<t2.y<<endl;
 	
 }
