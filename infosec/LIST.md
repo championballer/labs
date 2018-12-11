@@ -22,5 +22,6 @@ Elliptic
 3. Implement the following signature schemes:
 ```
 1. RSA 
-2.
+2. Elgamal
+
 ```
