@@ -112,17 +112,26 @@ point scalar(point p1, int d, int a, int p)
 	return p2;
 
 }
+
 int main()
 {
 
 	int a,b;
 	int p;
 	int d;
-	point p1;
-	point p2;
-	cin>>a>>p>>d>>p1.x>>p1.y;
-	p2 = scalar(p1,d,a,p);
-	cout<<p2.x<<" "<<p2.y<<endl;	
+	point e1;
+	point e2;
+	cout<<"a:";
+	cin>>a;
+	cout<<"p:";
+	cin>>p;
+	cout<<"d:";
+	cin>>d;
+	cout<<"e1:";
+	cin>>e1.x>>e1.y;
+	
+	e2 = scalar(e1,d,a,p);
+	cout<<"e2:"<<e2.x<<" "<<e2.y<<endl;	
 
 	
 	
