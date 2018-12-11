@@ -99,7 +99,19 @@ point unit(point p1,point p2,int a, int p)
 	else return add_diff(p1,p2,p);
 }
 
+point scalar(point p1, int d, int a, int p)
+{
+	point p2;
+	p2.x = p1.x;
+	p2.y = p1.y;
+	for(int i=0;i<d-1;i++)
+	{
+		p2 = unit(p1,p2,a,p);
+	}
 
+	return p2;
+
+}
 int main()
 {
 
@@ -109,15 +121,8 @@ int main()
 	point p1;
 	point p2;
 	cin>>a>>p>>d>>p1.x>>p1.y;
-	p2.x = p1.x;
-	p2.y = p1.y;
-	for(int i=0;i<d-1;i++)
-	{
-		p2 = unit(p1,p2,a,p);
-	}
-
-	cout<<p2.x<<" "<<p2.y<<endl;
-	
+	p2 = scalar(p1,d,a,p);
+	cout<<p2.x<<" "<<p2.y<<endl;	
 
 	
 	
