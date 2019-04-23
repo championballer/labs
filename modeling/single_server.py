@@ -6,12 +6,14 @@ N=10
 
 def generate_random(): 
 	x=random.random() 
-	x=x*50+1 x=math.floor(x) 
+	x=x*50+1 
+	x=math.floor(x) 
 	return x
 
 for i in range(0,N): 
 	x=generate_random() 
-	temp=[] temp.append(x) 
+	temp=[] 
+	temp.append(x) 
 	x=generate_random() 
 	temp.append(x) 
 	s.append(temp)
