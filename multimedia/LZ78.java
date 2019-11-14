@@ -11,8 +11,7 @@ public class LZ78 {
 		String str = s.nextLine();
 		
 		System.out.println();
-		System.out.println("COMPRESSION");
-		System.out.println();
+		System.out.println("COMPRESSION\n");
 		
 		HashMap<String,Integer> map = new HashMap<>();
 		ArrayList<pair> codeGenerated = new ArrayList<>();
