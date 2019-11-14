@@ -13,7 +13,7 @@ Labs included:
   7. Image Processing
   8. Pattern Recognition
   9. Modeling and Simulation
-  10. Soft Computing
+  10. Computer Vision
 ```
 
 These snippets are not meant to encourage plagiarism, and the author only means to provide a reference points to those in need.
