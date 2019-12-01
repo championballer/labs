@@ -19,3 +19,5 @@ Labs included:
 These snippets are not meant to encourage plagiarism, and the author only means to provide a reference points to those in need.
 
 Please star in case you like or use the code here, so that others who might benefit from this code, can also find this repository.
+
+If you feel, there is any error in the codes, please feel free to open an issue or contribute using a PR, by creating your own fork. Cheers!
