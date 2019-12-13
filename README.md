@@ -1,8 +1,13 @@
 # Labs
-Practicals performed in different labs over different semesters. The detailed practical list for each lab can be found in their respective folders. The files for the labs are also provided for the labs. Other lab content will also be added in the future.
+Practicals performed in different labs over different semesters. The detailed practical list for each lab can be found in their respective folders. The files for the labs are also provided. There are plans to add other lab content in the future.
 
+These snippets are not meant to encourage plagiarism, and the author only means to provide a reference point to those in need.
 
-Labs included:
+Please star in case you like or use the code here, so that others who might benefit from this code, can also find this repository.
+
+If you feel, there is any error or issue in the codes,or incase you have any suggestions regarding the repository, please feel free to open an issue or contribute using a PR, by creating your own fork. Cheers!
+
+Codes for Labs included:
 ```
   1. Linux/Unix lab
   2. Multimedia
@@ -16,8 +21,3 @@ Labs included:
   10. Computer Vision
 ```
 
-These snippets are not meant to encourage plagiarism, and the author only means to provide a reference points to those in need.
-
-Please star in case you like or use the code here, so that others who might benefit from this code, can also find this repository.
-
-If you feel, there is any error in the codes, please feel free to open an issue or contribute using a PR, by creating your own fork. Cheers!
