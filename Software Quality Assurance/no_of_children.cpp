@@ -81,12 +81,12 @@ public:
 int main()
 {
 	A sample;
-	B sampleChild;
-	B sampleChild2;
-	C sampleChild3;
-	D sampleChild4;
-	D sampleChild5;
-	E sampleChild6;
+	B * sampleChild = new B();
+	B * sampleChild2 = new B();
+	C * sampleChild3 = new C();
+	D * sampleChild4 = new D();
+	D * sampleChild5 = new D();
+	E * sampleChild6 = new E();
 	for(auto it = child_freq.begin();it!=child_freq.end();it++)
 	{
 		cout<<it->first<<" "<<it->second<<endl;
